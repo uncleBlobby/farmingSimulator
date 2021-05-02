@@ -1,0 +1,88 @@
+body {
+    background-color:rgb(39, 39, 39);
+    display: flex;
+    justify-content:left;
+    color: white;
+
+}
+
+#leftSideBar {
+    border: 1px dashed white;
+    width: 320px;
+    height: 1024px;
+}
+
+#toolBarGrid {
+    border: 1px dashed white;
+    width: 320px;
+    height: 64px;
+    display: grid;
+    grid-template-columns: repeat(5, 64px);
+    grid-template-rows: repeat(1, 64px);
+}
+
+#toolBarSlot {
+    border: 1px dashed blue;
+    height: 64px;
+    width: 64px;
+}
+
+#mainContainer {
+    border: 1px dashed white;
+    width: 1024px;
+    height: 1024px;
+}
+
+#bgSpriteGrid {
+
+    width: 1024px;
+    height: 1024px;
+    display: grid;
+    grid-template-columns: repeat(16, 64px);
+    grid-template-rows: repeat(16, 64px);
+}
+
+.bgSpriteChunk {
+
+}
+
+.clicked {
+    background-color:white;
+}
+/*
+.bgSpriteChunk:hover {
+    background-color:rgb(66, 66, 66);
+}
+*/
+.grass {
+    width: 64px;
+    height: 64px;
+    content: url("assets/sprites/simpleGrass1.png");
+
+}
+
+.grass:hover {
+    width: 64px;
+    height: 64px;
+    content: url("assets/sprites/simpleGrass1hover.png");
+}
+
+.tilled {
+    content: url("assets/sprites/tilledEarth-1.png");
+}
+
+.tilled:hover {
+    content: url("assets/sprites/tilledEarth-1hover.png");
+}
+
+.hoe {
+    content: url("assets/sprites/simpleHoe-1.png");
+}
+
+.hoe:hover {
+    content: url("assets/sprites/simpleHoe-1hover.png");
+}
+
+.hoeSelected {
+    content: url("assets/sprites/simpleHoe-1hover.png");
+}
