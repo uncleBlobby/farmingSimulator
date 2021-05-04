@@ -102,3 +102,17 @@ body {
 .wateredSoil {
     content: url("assets/sprites/tilledEarthWatered.png");
 }
+
+.seeds {
+    content: url("assets/sprites/seeds.png");
+}
+.seeds:hover {
+    content: url("assets/sprites/seedsHover.png");
+}
+.seedsSelected {
+    content: url("assets/sprites/seedsHover.png");
+}
+
+.seededSoil {
+    content: url("assets/sprites/tilledEarthSeeded.png");
+}

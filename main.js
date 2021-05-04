@@ -57,6 +57,11 @@
             console.log("Active Tool is: " + activeTool);
             toolBarSlots[1].classList.add("waterCanSelected");
         }
+        if(e.currentTarget.classList.contains("seeds")){
+            activeTool = "seeds";
+            console.log("Active Tool is: " + activeTool);
+            toolBarSlots[2].classList.add("seedsSelected");
+        }
     }
 
 //function to highlight selected tool
@@ -66,6 +71,7 @@
     function drawToolSprites(){
         toolBarSlots[0].classList.add("hoe");
         toolBarSlots[1].classList.add("waterCan");
+        toolBarSlots[2].classList.add("seeds");
     }
 
     drawToolSprites();
@@ -116,6 +122,21 @@
             case true:
                 console.log("You've already watered soil on sprite #:" + e.currentTarget.id);
                 break;
+        }
+        }
+        }
+        if(activeTool == "seeds"){
+        if(e.currentTarget.classList.contains("tilled")){
+        switch(e.currentTarget.classList.contains("seededSoil")){
+            case false:
+                e.currentTarget.classList.add("seededSoil");
+                e.currentTarget.classList.remove("tilled");
+                console.log("You planted seeds on sprite #:" + e.currentTarget.id);
+                break;
+            case true:
+                console.log("You've already planted seeds on sprite #:" + e.currentTarget.id);
+                break;
+
         }
         }
         }
