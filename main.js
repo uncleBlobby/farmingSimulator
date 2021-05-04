@@ -52,11 +52,20 @@
             console.log("Active Tool is: " + activeTool);
             toolBarSlots[0].classList.add("hoeSelected");
         }
+        if(e.currentTarget.classList.contains("waterCan")){
+            activeTool = "waterCan";
+            console.log("Active Tool is: " + activeTool);
+            toolBarSlots[1].classList.add("waterCanSelected");
+        }
     }
+
+//function to highlight selected tool
+
 
 //function to draw tool sprites (can add remaining tools in this function)
     function drawToolSprites(){
         toolBarSlots[0].classList.add("hoe");
+        toolBarSlots[1].classList.add("waterCan");
     }
 
     drawToolSprites();
@@ -94,6 +103,20 @@
             case true:
                 console.log("You've already tilled sprite #:" + e.currentTarget.id);
                 break;
+        }
+        }
+        if(activeTool == "waterCan"){
+        if(e.currentTarget.classList.contains("tilled")){
+        switch(e.currentTarget.classList.contains("wateredSoil")){
+            case false:
+                e.currentTarget.classList.add("wateredSoil");
+                e.currentTarget.classList.remove("tilled");
+                console.log("You watered soil on sprite #:" + e.currentTarget.id);
+                break;
+            case true:
+                console.log("You've already watered soil on sprite #:" + e.currentTarget.id);
+                break;
+        }
         }
         }
     }

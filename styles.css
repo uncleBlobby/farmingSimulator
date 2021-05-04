@@ -86,3 +86,19 @@ body {
 .hoeSelected {
     content: url("assets/sprites/simpleHoe-1hover.png");
 }
+
+.waterCan{
+    content: url("assets/sprites/waterCan1.png");
+}
+
+.waterCan:hover {
+    content: url("assets/sprites/waterCan1-hover.png");
+}
+
+.waterCanSelected {
+    content: url("assets/sprites/waterCan1-hover.png");
+}
+
+.wateredSoil {
+    content: url("assets/sprites/tilledEarthWatered.png");
+}
